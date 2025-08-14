@@ -125,9 +125,9 @@ def github_webhook():
             ]
             post_slack(text, blocks)
 
-        # ignore other events to reduce noise
+
     except Exception as e:
-        # Notify errors to Slack (non-fatal)
+
         try:
             post_slack(f"⚠️ Error handling `{event}`: `{e}`")
         except Exception:
